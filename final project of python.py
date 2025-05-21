@@ -105,9 +105,7 @@ def run_main(people_dictionary_1, ages_sum_1, list_ids_1) -> None:
         try:
             print_menu() 
             choose_option = Menu_Options(int(input("please choose an option:")))
-            if choose_option == Menu_Options.Save_New_Entry:
-                print("hi my name is edrian")
-                print("this is for main branch")              
+            if choose_option == Menu_Options.Save_New_Entry:            
                 ages_sum_1 = save_new_entry(people_dictionary_1, ages_sum_1,list_ids_1)
             elif choose_option == Menu_Options.Search_By_Id:
                 search_by_id(people_dictionary_1)
