@@ -144,3 +144,4 @@ def test_save_all_data(tmp_path, mock_input, capsys):
     captured = capsys.readouterr().out
     assert "Data saved successfully" in captured
     assert (tmp_path / "test_output.csv").exists()  # לוודא שהקובץ באמת נוצר
+    
