@@ -18,6 +18,41 @@ Robust Input Handling: Includes validation for digits, alphabetic input, and han
 
 Menu Interface: Interactive console menu dynamically generated from Menu_Options enum.
 
+
+
+🧪 Automated Testing (Newly Added)
+
+A comprehensive pytest test suite was added to ensure the reliability and correctness of all project components.
+The test file (module_testing_script.py) includes:
+
+Helper Function Tests (library_functions.py):
+Validation of numeric and alphabetic input functions, ensuring proper looping on invalid inputs using unittest.mock.patch to simulate user input.
+
+Class Tests (Person, Student, Employee):
+Verification of object initialization, setters/getters, type correctness, and string representation behavior.
+
+Integration Tests (final_project_of_python.py):
+Testing key program functions such as:
+
+save_new_entry (data creation and dictionary updates)
+
+search_by_id (invalid ID handling)
+
+print_ages_avg (zero division safety)
+
+print_all_names / print_all_ids (output correctness)
+
+print_entry_by_index (index validity)
+
+print_entries (polymorphic output)
+
+save_all_data (CSV creation and save verification)
+
+These tests use mocked input, captured stdout (capsys), and temporary file handling to fully automate validation without requiring user interaction.
+
+✅ Result: The test suite verifies both unit-level and integration-level correctness, ensuring stable and maintainable code quality.
+
+
 🛠️ Technologies & Concepts
 
 Python 3
@@ -30,11 +65,13 @@ Polymorphism (shared interface for all objects)
 
 Encapsulation (private attributes with getter methods)
 
-Modules: pandas, os
+Modules: pandas, os, pytest, unittest.mock
 
 Input validation and error handling
 
 CSV export and data management
+
+Automated testing and mocking
 
 📁 Project Structure
 
@@ -50,6 +87,8 @@ library_functions.py – Helper functions for input validation and dictionary op
 
 final project of python.py – Main file that runs the program and integrates all modules.
 
+module_testing_script  - Automated test suite (pytest).
+
 Key Learning Outcomes✅
 
 Solid understanding of OOP principles in Python.
@@ -59,3 +98,7 @@ Experience in menu-driven application design.
 Handling data validation, error management, and CSV exports.
 
 Demonstrated ability to combine multiple modules into a cohesive project.
+
+Writing automated unit and integration tests using pytest and mock.
+
+Ensuring maintainability through test coverage and clean architecture.
